@@ -1,0 +1,30 @@
+{
+  "name": "movisio/nais-cs",
+  "type": "composer-plugin",
+  "description": "Coding styles rules and git hook for NAIS Based Applications",
+  "keywords": ["nais", "phpcs", "ruleset", "movisio"],
+  "homepage": "https://movisio.com",
+  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "version": "1.0",
+  "require": {
+    "php": ">=7.0",
+    "composer-plugin-api": "^1",
+    "slevomat/coding-standard": "4.*",
+    "squizlabs/php_codesniffer": "3.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "NaisCodingStandard\\": "src/NaisCodingStandard/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0"
+    },
+    "class": "NaisCodingStandard\\ComposerPlugin"
+  },
+  "require-dev": {
+    "composer/composer": "dev-master"
+  }
+}
+
