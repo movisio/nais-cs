@@ -54,7 +54,11 @@
     <rule ref="SlevomatCodingStandard.PHP.UselessParentheses"/>
     <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
     <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
-    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
+        <properties>
+            <property name="ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach" type="bool" value="true"/>
+        </properties>
+    </rule>
     <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
 
     <!-- Formatting - rules for consistent code looks -->
