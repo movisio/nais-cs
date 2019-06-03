@@ -13,6 +13,13 @@
     <exclude-pattern>*/www/*</exclude-pattern>
     <exclude-pattern>*/phpqrcode.php</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*.min.css</exclude-pattern>
+    <exclude-pattern>*.min.js</exclude-pattern>
+    <exclude-pattern>*/jquery*</exclude-pattern>
+    <exclude-pattern>webpack.config.js</exclude-pattern>
+    <exclude-pattern>*/address_form.js</exclude-pattern>
+    <exclude-pattern>*/bootstrap.js</exclude-pattern>
+    <exclude-pattern>*/nette.ajax.js</exclude-pattern>
 
     <!-- relative path from PHPCS source location -->
     <config name="installed_paths" value="../../slevomat/coding-standard,../../movisio/nais-cs/src/NaisCodingStandard"/>
