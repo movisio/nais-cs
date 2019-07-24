@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
 STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.php`
@@ -7,34 +7,39 @@ STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \
 if [ "$#" -eq 1 ]
 then
     oIFS=$IFS
-    IFS='
-    '
+    IFS=$'\n'
     SFILES="$1"
     IFS=$oIFS
 fi
 SFILES=${SFILES:-$STAGED_FILES_CMD}
 
+FILES=()
 echo "Checking PHP Lint..."
+oIFS=$IFS
+IFS=$'\n'
 for FILE in $SFILES
 do
-    php -l -d display_errors=0 $PROJECT/$FILE
+    php -l -d display_errors=0 "$PROJECT/$FILE"
     if [ $? != 0 ]
     then
         echo "Fix the error before commit."
         exit 1
     fi
-    FILES="$FILES $PROJECT/$FILE"
+    FILES+=("$PROJECT/$FILE")
 done
+IFS=$oIFS
 
-if [ "$FILES" != "" ]
+CFILES=$(printf "\"%s\" " "${FILES[@]}")
+
+if [ "$CFILES" != "" ]
 then
     echo "Running Code Sniffer. Code standard vendor/movisio/nais-cs/config/ruleset.xml."
-    ./vendor/bin/phpcs --standard=vendor/movisio/nais-cs/config/ruleset.xml --colors --encoding=utf-8 -p $FILES
+    ./vendor/bin/phpcs --standard=vendor/movisio/nais-cs/config/ruleset.xml --colors --encoding=utf-8 -p "${FILES[@]}"
     if [ $? != 0 ]
     then
         echo "Fix the error before commit!"
         echo "Run"
-        echo "  ./vendor/bin/phpcbf --standard=vendor/movisio/nais-cs/config/ruleset.xml $FILES"
+        echo "  ./vendor/bin/phpcbf --standard=vendor/movisio/nais-cs/config/ruleset.xml $CFILES"
         echo "for automatic fix or fix it manually."
         exit 1
     fi
