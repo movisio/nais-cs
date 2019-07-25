@@ -49,7 +49,7 @@ fi
 # ESLINT
 # 
 
-STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.js`
+STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.js$`
 
 # Determine if a file list is passed
 if [ "$#" -eq 1 ]
