@@ -1,6 +1,9 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v1.2.0
+* Added eslint support
+
 v1.1.2
 * Fix error when commit does not contain any *.php files
 

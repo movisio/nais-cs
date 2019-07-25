@@ -45,4 +45,33 @@ then
     fi
 fi
 
+# 
+# ESLINT
+# 
+
+STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.js`
+
+# Determine if a file list is passed
+if [ "$#" -eq 1 ]
+then
+    oIFS=$IFS
+    IFS='
+    '
+    JSFILES="$1"
+    IFS=$oIFS
+fi
+JSFILES=${JSFILES:-$STAGED_FILES_CMD}
+
+echo "Checking ESLint..."
+echo $STAGED_FILES_CMD
+for FILE in $JSFILES
+do
+    eslint "$PROJECT/$FILE"
+    if [ $? != 0 ]
+    then
+        echo "Fix the error before commit."
+        exit 1
+    fi
+done
+
 exit $?
