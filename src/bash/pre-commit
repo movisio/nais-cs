@@ -31,7 +31,7 @@ IFS=$oIFS
 
 CFILES=$(printf "\"%s\" " "${FILES[@]}")
 
-if [ "$CFILES" != "" ]
+if [ ${#FILES[@]} != 0 ]
 then
     echo "Running Code Sniffer. Code standard vendor/movisio/nais-cs/config/ruleset.xml."
     ./vendor/bin/phpcs --standard=vendor/movisio/nais-cs/config/ruleset.xml --colors --encoding=utf-8 -p "${FILES[@]}"
