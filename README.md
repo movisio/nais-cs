@@ -1,6 +1,11 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v1.2.2
+
+* Eslint command is now called from node_modules in pre-commmit hook
+* Added extendable Eslint rules
+
 v1.2.1
 * Fixed eslint pre commit hook only for .js files
 
