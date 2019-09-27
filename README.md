@@ -1,12 +1,13 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
-v1.2.3
+v1.2.4
+* limit codesniffer to 3.4.* (3.5.0 brought better PSR12 which currently collides with the slevomat config)
 
+v1.2.3 
 * CSS files no longer checked by `phpcs`
 
 v1.2.2
-
 * Eslint command is now called from node_modules in pre-commmit hook
 * Added extendable Eslint rules
 
