@@ -6,11 +6,11 @@
     <exclude-pattern>*/migrations/*</exclude-pattern>
     <exclude-pattern>*/config/*</exclude-pattern>
     <exclude-pattern>*/customer/*</exclude-pattern>
-    <exclude-pattern type="relative">^/data/*</exclude-pattern>
-    <exclude-pattern type="relative">^/temp/*</exclude-pattern>
-    <exclude-pattern type="relative">^/docker/*</exclude-pattern>
-    <exclude-pattern type="relative">^/vendor/*</exclude-pattern>
-    <exclude-pattern type="relative">^/www/*</exclude-pattern>
+    <exclude-pattern type="relative">^data/*</exclude-pattern>
+    <exclude-pattern type="relative">^temp/*</exclude-pattern>
+    <exclude-pattern type="relative">^docker/*</exclude-pattern>
+    <exclude-pattern type="relative">^vendor/*</exclude-pattern>
+    <exclude-pattern type="relative">^www/*</exclude-pattern>
     <exclude-pattern>*/phpqrcode.php</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
     <exclude-pattern>*.css</exclude-pattern>
