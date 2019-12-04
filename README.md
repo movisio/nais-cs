@@ -1,6 +1,9 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v1.3.0
+* change some excludes to relative
+
 v1.2.4
 * limit codesniffer to 3.4.* (3.5.0 brought better PSR12 which currently collides with the slevomat config)
 
