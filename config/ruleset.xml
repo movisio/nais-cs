@@ -6,6 +6,7 @@
     <exclude-pattern>*/migrations/*</exclude-pattern>
     <exclude-pattern>*/config/*</exclude-pattern>
     <exclude-pattern>*/customer/*</exclude-pattern>
+    <exclude-pattern>*/assets/*</exclude-pattern>
     <exclude-pattern type="relative">^data/*</exclude-pattern>
     <exclude-pattern type="relative">^temp/*</exclude-pattern>
     <exclude-pattern type="relative">^docker/*</exclude-pattern>

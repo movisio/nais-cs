@@ -1,6 +1,9 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v1.3.2
+* Exclude all in assets directory
+
 v1.3.1
 * Repair .js and .css file exclude pattern
 
