@@ -13,8 +13,7 @@
     <exclude-pattern type="relative">^www/*</exclude-pattern>
     <exclude-pattern>*/phpqrcode.php</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
-    <exclude-pattern>*.css</exclude-pattern>
-    <exclude-pattern>*.js</exclude-pattern>
+    <exclude-pattern>*\.(css|js)$</exclude-pattern>
     <exclude-pattern>*/jquery*</exclude-pattern>
 
     <!-- relative path from PHPCS source location -->
