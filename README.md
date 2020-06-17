@@ -1,6 +1,14 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v2.0.0
+* Require PHP 7.4
+* Update to slevomat/coding-standard 6
+* Remove lock on phpcs version
+* Replace `SlevomatCodingStandard.TypeHints.TypeHintDeclaration` excludes with new `SlevomatCodingStandard.TypeHints.*TypeHint` ones
+* Remove `UselessParentheses` check (was too strict and clashed with readability)
+* Exclude a handful of minor PSR-12 spacing rules
+
 v1.3.2
 * Exclude all in assets directory
 
