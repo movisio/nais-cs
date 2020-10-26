@@ -1,6 +1,9 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v2.0.2
+* Allow usage with Composer v2
+
 v2.0.0
 * Require PHP 7.4
 * Update to slevomat/coding-standard 6

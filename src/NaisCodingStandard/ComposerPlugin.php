@@ -55,4 +55,12 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
         copy(__DIR__ . self::HOOK_FILE, __DIR__ . self::HOOK_DESTINATION . '/pre-commit');
         chmod(__DIR__ . self::HOOK_DESTINATION . '/pre-commit', 0775);
     }
+
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
+    }
 }
