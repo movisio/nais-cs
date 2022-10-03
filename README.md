@@ -1,6 +1,11 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v3.0.0
+* Require PHP 8.1
+* Update slevomat/coding-standard to v8
+* Enabled new sniffs `UselessConstantTypeHint`, `UnionTypeHintFormat` and `RequireNonCapturingCatch`
+
 v2.0.2
 * Allow usage with Composer v2
 
