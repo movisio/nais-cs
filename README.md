@@ -1,6 +1,13 @@
 # nais-cs
 Coding styles rules and git hook for NAIS Based Applications
 
+v3.1.0
+* Require PHP 8.3+
+* `UnionTypeHintFormat` replaced with `DNFTypeHintFormat` (Slevomat CS 8.16+)
+* Ruleset: typed class constants (`ClassConstantTypeHint`), `ConstantSpacing`
+* Custom sniffs: native `int` parameters, `enum_exists()` in `StringClassReferenceSniff`
+* Composer plugin: `void` return types, Composer 2 plugin API only
+
 v3.0.0
 * Require PHP 8.1
 * Update slevomat/coding-standard to v8

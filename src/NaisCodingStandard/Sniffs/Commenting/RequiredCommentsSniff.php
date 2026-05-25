@@ -16,7 +16,7 @@ use function sprintf;
  */
 class RequiredCommentsSniff implements Sniff
 {
-    public const CODE_COMMENT_REQUIRED = 'CommentRequired';
+    public const string CODE_COMMENT_REQUIRED = 'CommentRequired';
 
     /**
      * @return mixed[]
@@ -30,11 +30,9 @@ class RequiredCommentsSniff implements Sniff
     }
 
     /**
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
-     * @param \PHP_CodeSniffer\Files\File $phpcsFile
-     * @param int $definitionPointer
+     * @param File $phpcsFile
      */
-    public function process(File $phpcsFile, $definitionPointer) : void
+    public function process(File $phpcsFile, int $definitionPointer) : void
     {
         $hasDocComment = DocCommentHelper::hasDocComment($phpcsFile, $definitionPointer);
 
