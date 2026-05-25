@@ -1,5 +1,6 @@
 {
   "name": "movisio/nais-cs",
+  "version": "4.0.0",
   "type": "composer-plugin",
   "description": "Coding styles rules and git hook for NAIS Based Applications",
   "keywords": ["nais", "phpcs", "ruleset", "movisio"],
