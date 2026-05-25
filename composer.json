@@ -6,9 +6,9 @@
   "homepage": "https://movisio.com",
   "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
   "require": {
-    "php": ">=8.1",
-    "composer-plugin-api": "^1.0 || ^2.0",
-    "slevomat/coding-standard": "8.*"
+    "php": ">=8.3",
+    "composer-plugin-api": "^2.0",
+    "slevomat/coding-standard": "^8.15"
   },
   "autoload": {
     "psr-4": {
@@ -19,7 +19,7 @@
     "class": "NaisCodingStandard\\ComposerPlugin"
   },
   "require-dev": {
-    "composer/composer": "dev-master"
+    "composer/composer": "^2.7",
+    "squizlabs/php_codesniffer": "^3.9"
   }
 }
-
