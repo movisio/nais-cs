@@ -2,13 +2,10 @@
 Coding styles rules and git hook for NAIS Based Applications
 
 v4.0.0
-<<<<<<< Updated upstream
-=======
 * SemVer major: PHP 8.3+ required (same ruleset as 3.1.0)
 * `DNFTypeHintFormat` replaces deprecated `UnionTypeHintFormat`
 
 v3.1.0
->>>>>>> Stashed changes
 * Require PHP 8.3+
 * `UnionTypeHintFormat` replaced with `DNFTypeHintFormat` (Slevomat CS 8.16+)
 * Ruleset: typed class constants (`ClassConstantTypeHint`), `ConstantSpacing`
